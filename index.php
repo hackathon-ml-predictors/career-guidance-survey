@@ -62,7 +62,7 @@
 							?>
 							<li class="question-loader">
 								<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>"><?php echo $questions[$index]->title; ?></label>
-								<div class="loader-img">
+								<div class="clearfix loader-img fs-anim-lower">
 									<img src="<?php echo $questions[$index]->image; ?>">
 								</div>
 							</li>
@@ -71,26 +71,43 @@
 							if($questions[$index]->option_type  == "number") : 
 								?>
 								<li>
-									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>"><?php echo $questions[$index]->title; ?></label>
+									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>"><?php echo $questions[$index]->title; ?></label>
 									<input class="fs-anim-lower" id="q<?php echo $index; ?>" name="q<?php echo $questions[$index]->id; ?>" type="number" placeholder="100" min="0"/>
 								</li>
+
 							<?php	
 							elseif($questions[$index]->option_type  == "radio"):
 							?>
 								<li data-input-trigger>
-									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>"><?php echo $questions[$index]->title; ?></label>
+									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>"><?php echo $questions[$index]->title; ?></label>
 									<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 										<?php 
 										$opt_index = 0;
 										foreach($questions[$index]->options as $option): 
 											?>
-											<!-- <style>
-												.q<?php echo $index . $opt_index; ?>:after { background-image: url(img/dollar.svg);}</style> -->
 											<span><input id="q<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>" type="radio" value="<?php echo $option; ?>"/><label for="q<?php echo $index . $opt_index; ?>" class="<?php echo str_replace(" ","_",strtolower($option)); ?>"><?php echo $option; ?></label></span>
 											<?php
 											$opt_index++;
 										endforeach;?>
 									</div>
+								</li>
+							<?php
+							elseif($questions[$index]->option_type  == "checkbox"):
+							?>
+								<li>
+									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>" ><?php echo $questions[$index]->title; ?></label>
+									<div class="boxes clearfix fs-anim-lower">
+									<?php 
+										$opt_index = 0;
+										 foreach($questions[$index]->options as $option): 
+										?>	
+									  		<span><input type="checkbox" id="box-<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>[]">
+									  		<label for="box-<?php echo $index . $opt_index; ?>"><?php echo $option; ?></label></span>
+									  <?php 
+									  	$opt_index++; 
+									  	endforeach; 
+										?>
+									</div>	
 								</li>
 							<?php
 							endif;
@@ -103,7 +120,7 @@
 			</div><!-- /fs-form-wrap -->
 
 			<!-- Related demos -->
-			<div class="related">
+			<!-- <div class="related">
 				<p>If you enjoyed this demo you might also like:</p>
 				<a href="http://tympanus.net/Development/MinimalForm/">
 					<img src="img/relatedposts/minimalform1-300x162.png" />
@@ -113,7 +130,7 @@
 					<img src="img/relatedposts/MorphingButtons-300x162.png" />
 					<h3>Morphing Buttons Concept</h3>
 				</a>
-			</div>
+			</div> -->
 
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>

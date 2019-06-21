@@ -204,3 +204,86 @@ button.fs-prev {
 .excellent:after {
 	 background-image: url(../img/dollar.svg);
 }
+
+.fs-numbers {
+	width: 3em !important;
+}
+.boxes {
+  margin: auto;
+  padding: 50px;
+}
+
+/*Checkboxes styles*/
+.boxes  input[type="checkbox"] { display: none; }
+
+.boxes input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  font: 30px/30px 'Open Sans', Arial, sans-serif;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.boxes input[type="checkbox"] + label:last-child { margin-bottom: 20px; height: 50px; }
+
+.boxes input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #00000066;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+.boxes input[type="checkbox"]:checked + label:before {
+  width: 20px;
+  top: -5px;
+  left: 10px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.boxes label {
+   
+    width: 50%;
+    float: left;
+}
+
+.fs-fields .fs-radio-custom label::after {
+	  /*  width: 80% !important;
+    height: 80% !important;*/
+}
+.fs-form-full{
+	top: 25% !important;
+}
+.fs-title {
+	padding: 10px !important; 
+}
+button.fs-continue, button.fs-prev { 
+position: fixed !important;
+ }
+
+@media only screen and (max-width: 768px){
+ 	.boxes{
+ 		padding:5px;
+ 	}
+ 	.boxes label {
+ 		width: 100%
+ 	}
+ 	.fs-fields > li .fs-radio-custom span {
+ 		width: 45%;
+ 	}
+ }

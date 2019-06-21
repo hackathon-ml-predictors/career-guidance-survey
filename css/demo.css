@@ -153,3 +153,54 @@ button.fs-prev {
 .fs-progress{
 	    background: #cdcdcd !important;
 }
+.question-loader label{
+	text-align: center;
+	display: block !important;
+}
+.question-loader .loader-img{
+	display: block !important;
+	text-align: center;	
+}
+
+.yes:after {
+	 background-image: url(../img/dollar.svg);
+}
+.no:after {
+	 background-image: url(../img/dollar.svg);
+}
+.mnagement:after {
+	 background-image: url(../img/dollar.svg);
+}
+.technical:after {
+	 background-image: url(../img/dollar.svg);
+}
+.salary:after {
+	 background-image: url(../img/dollar.svg);
+}
+.job:after {
+	 background-image: url(../img/dollar.svg);
+}
+.smart_worker:after {
+	 background-image: url(../img/dollar.svg);
+}
+.hard_worker:after {
+	 background-image: url(../img/dollar.svg);
+}
+.stubborn:after {
+	 background-image: url(../img/dollar.svg);
+}
+.gentle:after {
+	 background-image: url(../img/dollar.svg);
+}
+.work:after {
+	 background-image: url(../img/dollar.svg);
+}
+.poor:after {
+	 background-image: url(../img/dollar.svg);
+}
+.medium:after {
+	 background-image: url(../img/dollar.svg);
+}
+.excellent:after {
+	 background-image: url(../img/dollar.svg);
+}

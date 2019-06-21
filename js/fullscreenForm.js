@@ -118,6 +118,17 @@
 		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
 		this._showCtrl( this.ctrlContinue );
 
+		// continue button (jump to next field)
+		this.ctrlPrev = createElement( 'button', { cName : 'fs-prev codrops-icon codrops-icon-prev', inner : 'Back', appendTo : this.ctrls } );
+		
+			this._hideCtrl( this.ctrlPrev ); 
+		if(this.current == 0){
+			console.log(this.current);
+		}
+		else{
+			//this._showCtrl( this.ctrlPrev );
+		}	
+
 		// navigation dots
 		if( this.options.ctrlNavDots ) {
 			this.ctrlNav = createElement( 'nav', { cName : 'fs-nav-dots', appendTo : this.ctrls } );
@@ -126,7 +137,7 @@
 				dots += i === this.current ? '<button class="fs-dot-current"></button>' : '<button disabled></button>';
 			}
 			this.ctrlNav.innerHTML = dots;
-			this._showCtrl( this.ctrlNav );
+			this._hideCtrl( this.ctrlNav );
 			this.ctrlNavDots = [].slice.call( this.ctrlNav.children );
 		}
 
@@ -169,6 +180,12 @@
 		// show next field
 		this.ctrlContinue.addEventListener( 'click', function() {
 			self._nextField(); 
+		} );
+
+		// show next field
+		this.ctrlPrev.addEventListener( 'click', function() {
+			console.log(self.current );
+			self._showField(self.current - 1); 
 		} );
 
 		// navigation dots

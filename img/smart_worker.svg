@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_question_skeptical</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Styleguide/Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_question_skeptical">
+            <g id="Page-1" transform="translate(20.000000, 20.000000)">
+                <path d="M100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 C77.614,0 100,22.386 100,50" id="Fill-1" fill="#FFFFFF"></path>
+                <path d="M100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 C77.614,0 100,22.386 100,50 L100,50 Z" id="Stroke-3" stroke="#000000" stroke-width="4"></path>
+                <path d="M19.7406,41.2665 L44.4866,41.2665" id="Stroke-5" stroke="#000000" stroke-width="4"></path>
+                <path d="M55.4056,40.2649 C55.4056,40.2649 66.0726,40.9319 67.4056,33.5979 C67.4056,33.5979 70.7386,24.2649 83.4056,32.2649" id="Stroke-7" stroke="#000000" stroke-width="4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

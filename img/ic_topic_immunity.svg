@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_topic_immunity</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Styleguide/Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_topic_immunity" stroke="#000000" stroke-width="4">
+            <g id="Page-1" transform="translate(14.000000, 10.000000)">
+                <path d="M15.8182485,39.6199989 C15.8182485,39.6199989 31.6364971,32.6675561 31.6364971,22.692595 L31.6364971,5.76612069 C31.6364971,5.76612069 30.6798157,5.90278947 29.1848266,5.90278947 C25.8731656,5.90278947 19.9136632,4.30274211 15.8182485,0 C11.7228339,4.30274211 5.76333154,5.90278947 2.45074075,5.90278947 C0.954821985,5.90278947 0,5.76612069 0,5.76612069 L0,22.692595 C0,32.6675561 15.8182485,39.6199989 15.8182485,39.6199989 L15.8182485,39.6199989 Z" id="Stroke-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

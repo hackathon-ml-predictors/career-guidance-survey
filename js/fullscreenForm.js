@@ -208,12 +208,44 @@
 		            acc.push(o);
 		            return acc;
 		        },[]);
-		    
+		    formData.pop();
 			console.log(JSON.stringify(formData, null, 4));
-			/*var oReq = new XMLHttpRequest();
-			oReq.open("GET", "http://www.example.org/example.txt");
-			oReq.send();
-*/
+			
+			var http = new XMLHttpRequest();
+			var url = 'get_data.php';
+			var params = JSON.stringify(formData, null, 4);
+			http.open('POST', url, true);
+
+			//Send the proper header information along with the request
+			http.setRequestHeader('Content-type', 'application/json');
+
+			http.onreadystatechange = function() {//Call a function when the state changes.
+			    if(http.readyState == 4 && http.status == 200) {
+			        console.log(http.responseText);
+			       
+			        // thank you
+			var http1 = new XMLHttpRequest();
+			var url1 = 'thankyou.php';
+			var params1 = JSON.stringify(http.responseText, null, 4);
+			http1.open('POST', url1, true);
+
+			//Send the proper header information along with the request
+			http1.setRequestHeader('Content-type', 'application/json');
+
+			http1.onreadystatechange = function() {//Call a function when the state changes.
+			    if(http1.readyState == 4 && http1.status == 200) {
+			        console.log(http1.responseText);
+			       
+			       document.getElementById('myform').style.display = "none";
+			       document.getElementById('thankyou').innerHTML = http1.responseText;
+			        //alert(http1.responseText);
+			    }
+			}
+			http1.send(params1);
+			       
+			    }
+			}
+			http.send(params);
 			 
 			e.preventDefault();
 		});

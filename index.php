@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Fullscreen Form Interface</title>
+		<title>Career baba | predictors of your career</title>
 		<meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations" />
 		<meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
 		<meta name="author" content="Codrops" />
@@ -58,6 +58,7 @@
 					}
 					curl_close($handle);
 				?>
+				
 				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 					<ol class="fs-fields">
 						<?php 
@@ -78,43 +79,43 @@
 								?>
 								<li>
 									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>"><?php echo $questions[$index]->title; ?></label>
-									<input class="fs-anim-lower" id="q<?php echo $index; ?>" name="q<?php echo $questions[$index]->id; ?>" type="number" placeholder="100" min="0"/>
+									<input class="fs-anim-lower" id="q<?php echo $index; ?>" name="q<?php echo $questions[$index]->id; ?>" type="number" placeholder="100" min="0" max="100" required/>
 								</li>
 
-							<?php	 break;
+							<?php	 
 							elseif($questions[$index]->option_type  == "radio"):
 							?>
-								<!-- <li data-input-trigger>
+								 <li data-input-trigger>
 									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>"><?php echo $questions[$index]->title; ?></label>
 									<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 										<?php 
 										$opt_index = 0;
 										foreach($questions[$index]->options as $option): 
 											?>
-											<span><input id="q<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>" type="radio" value="<?php echo $option; ?>"/><label for="q<?php echo $index . $opt_index; ?>" class="<?php echo str_replace(" ","_",strtolower($option)); ?>"><?php echo $option; ?></label></span>
+											<span><input id="q<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>" type="radio" value="<?php echo $option; ?>"/><label for="q<?php echo $index . $opt_index; ?>" class="<?php echo str_replace(" ","_",strtolower($option)); ?>" <?php echo ($opt_index=0)?'checked':''?>><?php echo $option; ?></label></span>
 											<?php
 											$opt_index++;
 										endforeach;?>
 									</div>
-								</li> -->
+								</li> 
 							<?php
 							elseif($questions[$index]->option_type  == "checkbox"):
 							?>
-								<!-- <li>
+								<li>
 									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>" ><?php echo $questions[$index]->title; ?></label>
 									<div class="boxes clearfix fs-anim-lower">
 									<?php 
 										$opt_index = 0;
 										 foreach($questions[$index]->options as $option): 
 										?>	
-									  		<span><input type="checkbox" id="box-<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>[]" value="<?php echo $option; ?>">
+									  		<span><input type="checkbox" id="box-<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>[]" value="<?php echo $option; ?>" required>
 									  		<label for="box-<?php echo $index . $opt_index; ?>"><?php echo $option; ?></label></span>
 									  <?php 
 									  	$opt_index++; 
 									  	endforeach; 
 										?>
 									</div>	
-								</li> -->
+								</li> 
 							<?php
 							endif;
 						endif;
@@ -123,7 +124,11 @@
 					</ol><!-- /fs-fields -->
 					<button class="fs-submit" id="submit">Send answers</button>
 				</form><!-- /fs-form -->
-			</div><!-- /fs-form-wrap -->
+				<div class="fs-form-full" id="thankyou"></div>
+
+			</div>
+
+			<!-- /fs-form-wrap -->
 
 			<!-- Related demos -->
 			<!-- <div class="related">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_response_stayaway</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Styleguide/Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_response_stayaway">
+            <g id="Page-1" transform="translate(20.000000, 20.000000)">
+                <path d="M100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 C77.614,0 100,22.386 100,50" id="Fill-1" fill="#FFFFFF"></path>
+                <path d="M100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 C77.614,0 100,22.386 100,50 L100,50 Z" id="Stroke-3" stroke="#000000" stroke-width="4"></path>
+                <path d="M41.739,48.0982 C41.739,51.1362 39.277,53.5982 36.239,53.5982 C33.201,53.5982 30.739,51.1362 30.739,48.0982 C30.739,45.0602 33.201,42.5982 36.239,42.5982 C39.277,42.5982 41.739,45.0602 41.739,48.0982" id="Fill-5" fill="#000000"></path>
+                <path d="M70.239,48.0982 C70.239,51.1362 67.777,53.5982 64.739,53.5982 C61.701,53.5982 59.239,51.1362 59.239,48.0982 C59.239,45.0602 61.701,42.5982 64.739,42.5982 C67.777,42.5982 70.239,45.0602 70.239,48.0982" id="Fill-7" fill="#000000"></path>
+                <path d="M23.7382,27.2748 L43.0712,36.6078" id="Stroke-9" stroke="#000000" stroke-width="4"></path>
+                <path d="M57.7398,35.6073 L77.0728,26.2743" id="Stroke-11" stroke="#000000" stroke-width="4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

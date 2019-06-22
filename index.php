@@ -28,6 +28,12 @@
 				</div>
 
 				<?php
+
+				if(isset($_GET['q1'])){
+					echo "<pre>";
+					//print_r($_GET);
+					echo "</pre>";
+				}
 					$handle = curl_init();
 					 
 					$url = "http://192.168.1.158/hackathon/csvdata/questionresult.php";
@@ -75,10 +81,10 @@
 									<input class="fs-anim-lower" id="q<?php echo $index; ?>" name="q<?php echo $questions[$index]->id; ?>" type="number" placeholder="100" min="0"/>
 								</li>
 
-							<?php	
+							<?php	 break;
 							elseif($questions[$index]->option_type  == "radio"):
 							?>
-								<li data-input-trigger>
+								<!-- <li data-input-trigger>
 									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>"><?php echo $questions[$index]->title; ?></label>
 									<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 										<?php 
@@ -90,32 +96,32 @@
 											$opt_index++;
 										endforeach;?>
 									</div>
-								</li>
+								</li> -->
 							<?php
 							elseif($questions[$index]->option_type  == "checkbox"):
 							?>
-								<li>
+								<!-- <li>
 									<label class="fs-field-label fs-anim-upper" for="q<?php echo $index; ?>" data-info="<?php echo $questions[$index]->tooltip; ?>" ><?php echo $questions[$index]->title; ?></label>
 									<div class="boxes clearfix fs-anim-lower">
 									<?php 
 										$opt_index = 0;
 										 foreach($questions[$index]->options as $option): 
 										?>	
-									  		<span><input type="checkbox" id="box-<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>[]">
+									  		<span><input type="checkbox" id="box-<?php echo $index . $opt_index; ?>" name="q<?php echo $index; ?>[]" value="<?php echo $option; ?>">
 									  		<label for="box-<?php echo $index . $opt_index; ?>"><?php echo $option; ?></label></span>
 									  <?php 
 									  	$opt_index++; 
 									  	endforeach; 
 										?>
 									</div>	
-								</li>
+								</li> -->
 							<?php
 							endif;
 						endif;
 						endfor;
 						?>						
 					</ol><!-- /fs-fields -->
-					<button class="fs-submit" type="submit">Send answers</button>
+					<button class="fs-submit" id="submit">Send answers</button>
 				</form><!-- /fs-form -->
 			</div><!-- /fs-form-wrap -->
 

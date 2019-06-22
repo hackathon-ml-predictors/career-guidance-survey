@@ -121,13 +121,16 @@
 		// continue button (jump to next field)
 		this.ctrlPrev = createElement( 'button', { cName : 'fs-prev codrops-icon codrops-icon-prev', inner : 'Back', appendTo : this.ctrls } );
 		
-			this._hideCtrl( this.ctrlPrev ); 
+		this._hideCtrl( this.ctrlPrev ); 
 		if(this.current == 0){
 			console.log(this.current);
 		}
 		else{
 			//this._showCtrl( this.ctrlPrev );
 		}	
+
+		this.ctrlSubmit = document.getElementById("submit");
+
 
 		// navigation dots
 		if( this.options.ctrlNavDots ) {
@@ -196,6 +199,24 @@
 				} );
 			} );
 		}
+
+		this.ctrlSubmit.addEventListener('click',function(e){
+			var _formId = document.getElementById('myform'),
+		    formData = Array.prototype.slice.call(_formId.elements).reduce(function(acc,cur,indx,arr){
+		        var o = {type : cur.type, name : cur.name, value : cur.value};
+		            if(['checkbox','radio'].indexOf(cur.type) !==-1){o.checked = cur.checked;}
+		            acc.push(o);
+		            return acc;
+		        },[]);
+		    
+			console.log(JSON.stringify(formData, null, 4));
+			/*var oReq = new XMLHttpRequest();
+			oReq.open("GET", "http://www.example.org/example.txt");
+			oReq.send();
+*/
+			 
+			e.preventDefault();
+		});
 
 		// jump to next field without clicking the continue button (for fields/list items with the attribute "data-input-trigger")
 		this.fields.forEach( function( fld ) {
